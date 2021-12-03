@@ -1,0 +1,6 @@
+[
+    "/api/login$",
+    "/api/seed$",
+    "/api/test$",
+    "/api/reset-password$"
+]

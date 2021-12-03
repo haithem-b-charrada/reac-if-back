@@ -1,0 +1,63 @@
+[
+    {
+        "endpoint": "/api/login",
+        "method": "POST",
+        "headers_to_pass": ["Content-Type"],
+        "output_encoding": "no-op",
+        "backend": [
+            {
+                "host": [
+                    "${SECURITY_SERVICE}"
+                ],
+                "encoding": "no-op",
+                "url_pattern": "/login"
+            }
+        ]
+    },
+    {
+        "endpoint": "/api/seed",
+        "method": "POST",
+        "headers_to_pass": ["Content-Type","User-Email"],
+        "output_encoding": "no-op",
+        "backend": [
+            {
+                "host": [
+                    "${SECURITY_SERVICE}"
+                ],
+                "encoding": "no-op",
+                "url_pattern": "/seed"
+            }
+        ]
+    },
+    {
+        "endpoint": "/api/reset-password",
+        "method": "POST",
+        "headers_to_pass": ["Content-Type"],
+        "output_encoding": "no-op",
+        "backend": [
+            {
+                "host": [
+                    "${SECURITY_SERVICE}"
+                ],
+                "encoding": "no-op",
+                "url_pattern": "/reset-password"
+            }
+        ]
+    },
+
+    {
+        "endpoint": "/api/helloo",
+        "method": "POST",
+        "headers_to_pass": ["Content-Type"],
+        "output_encoding": "no-op",
+        "backend": [
+            {
+                "host": [
+                    "${SERVICE1_SERVICE}"
+                ],
+                "encoding": "no-op",
+                "url_pattern": "/hello"
+            }
+        ]
+    }
+]
